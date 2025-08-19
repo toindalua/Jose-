@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "unipar": {
+    "frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "unipar:build:production"
+              "buildTarget": "frontend:build:production"
             },
             "development": {
-              "buildTarget": "unipar:build:development"
+              "buildTarget": "frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "c0841159-aad2-4c02-92e0-1833f3ff8920"
+    "analytics": "f7e9bcfd-f776-4af5-82d2-9e8d2b5732e2"
   }
 }
