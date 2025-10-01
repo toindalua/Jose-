@@ -5,20 +5,13 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "cliente")
+
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -28,15 +21,22 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Cliente)) return false;
         Cliente cliente = (Cliente) o;
         return Objects.equals(id, cliente.id);
     }
-
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hash(id);
     }
 }

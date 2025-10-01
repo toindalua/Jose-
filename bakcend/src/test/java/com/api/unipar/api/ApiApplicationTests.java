@@ -1,10 +1,10 @@
-package com.api.unipar;
+package com.api.unipar.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UniparApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {

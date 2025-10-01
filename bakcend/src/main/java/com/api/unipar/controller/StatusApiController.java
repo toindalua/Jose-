@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/status")
+
 public class StatusApiController {
 
     @GetMapping()
     public String getStatus() {
-        return "Api funcional";
+        return "Api está Funcionando";
     }
-
 }
