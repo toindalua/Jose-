@@ -1,2 +1,29 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" class="p-fluid p-formgrid p-grid" style="margin: 1em 0;">
+  <div class="p-field p-col-12 p-md-6">
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" pInputText formControlName="nome" />
+    <small *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched" class="p-error">
+      Nome é obrigatório.
+    </small>
+  </div>
+
+  <div class="p-field p-col-12 p-md-6" style="display: flex; align-items: flex-end;">
+    <button pButton type="submit" label="Salvar" [disabled]="clienteForm.invalid"></button>
+  </div>
+</form>
+
+<p-table [value]="clientes$ | async" [rows]="5" style="margin-top: 2em;">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-cliente>
+    <tr>
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nome }}</td>
+    </tr>
+  </ng-template>
+</p-table>

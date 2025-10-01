@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-toolbar',
-  imports: [RouterLink, ButtonModule, ToolbarModule],
+  imports: [ToolbarModule, ButtonModule],
   templateUrl: './toolbar.html',
   styleUrl: './toolbar.scss'
 })
